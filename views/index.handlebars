@@ -1,41 +1,27 @@
 <h1>Eat-Da-Burger!</h1>
 
-{{!-- <h2>Burgers that are not Eaten!</h2> --}}
-
 <ul>
     {{#each burgers}}
         {{#unless devoured}}
-        {{> burger-block}}
-        {{!-- <button class="devour-it" data-id="{{id}}">
-            Devour It!
-        </button> --}}
+            {{> burger-block}}
         {{/unless}}
     {{/each}}
 </ul>
 
-{{!-- <h2>Burgers that are Eaten!</h2> --}}
-
-{{!-- <ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burger-block}}
+        {{/if}}
+    {{/each}}
+</ul>
 
 <form class="create-form">
+    <div class="form-group">
+        <input type="text" id="burgerName" name="bname">
+    </div>
 
-  <div class="form-group">
-    <input type="text" id="burgerName" name="bname">
-  </div>
+    <button type="submit">Submit</button>
 
-  {{!-- <div class="form-group">
-    <label for="devoured">Eaten?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
-    <input type="radio" name="devoured" value="0"> Not Eaten
-  </div> --}}
-
-  <button type="submit">Submit</button>
-
-  <h4>Enter a burger name and click the "Submit" button.</h4>
+    <h4>Enter a burger name and click the "Submit" button.</h4>
 </form>

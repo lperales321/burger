@@ -1,7 +1,9 @@
 <div class="form-group">
-    <input type="text" id="burgerName" name="bname" value="{{burger_name}}">
+    <input type="text" id="burgerName" name="bname" value="{{burger_name}}" readonly>
 
-    <button class="devour-it" data-id="{{id}}">
-        Devour It!
-    </button>
+    {{#unless devoured}}
+        <button class="devour-it" data-id="{{id}}">
+            Devour It!
+        </button>
+    {{/unless}}
 </div>
