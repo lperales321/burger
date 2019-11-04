@@ -1,27 +1,51 @@
-<h1>Eat-Da-Burger!</h1>
-
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burger-block}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burger-block}}
-        {{/if}}
-    {{/each}}
-</ul>
-
 <form class="create-form">
     <div class="form-group">
-        <input type="text" id="burgerName" name="bname">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <img class="burger-img" src="assets\img\burger.jpg" alt="burger-image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <h1 align="center">Eat-Da-Burger!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" align="left">
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                {{> burger-block}}
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col-lg-6" align="left">
+                    <ul>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burger-block}}
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <input type="text" id="burgerName" name="bname" size="40">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <button class="submit-it" type="submit">Submit</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <h6>Enter a burger name and click the "Submit" button.</h6>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <button type="submit">Submit</button>
-
-    <h4>Enter a burger name and click the "Submit" button.</h4>
 </form>
